@@ -12,7 +12,7 @@
 				}
 			}
 		}else{
-			return "<b><span class=\"er-red\">ERROR! Invalid Data Form input!  YAML must contain <i>fields:</i></span></b>";
+			return "<b><span class=\"er-red\">ERROR! Invalid Data Form input!  YAML must contain <i>fields:</i></span></b><br />Please check if you have spelt <i>fields:</i> correctly!";
 		}
 	}
 	if(!empty($_POST["yaml"])){
