@@ -45,7 +45,7 @@
 		<style>
 			html{
 				font-family: 'Open Sans', sans-serif;
-				font-size: 12px;
+				font-size: 14px;
 			}
 			td{ vertical-align: top; font-size: 12px; }
 			#status{text-align: center;padding: 0 1em;margin: 0.5em 0;border: 1px solid #EAA;}
