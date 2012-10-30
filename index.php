@@ -85,7 +85,30 @@
 	<body>
 		<div id="header"><span id="logo">Wikidot Data Form Converter</span></div>
 		<div id="content">
+			<center>
+				<script type="text/javascript"><!--
+				google_ad_client = "ca-pub-2102065243904072";
+				/* wd-dataform */
+				google_ad_slot = "9181870869";
+				google_ad_width = 728;
+				google_ad_height = 15;
+				//-->
+				</script>
+				<script type="text/javascript"
+				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
+			</center>
 			<p>This program converts existing forgiving YAML code into the current strict version.</p>
+			<p><b>How to use:</b></p>
+			<p>
+				<ol>
+					<li>Go to your _template page with an non-compliant YAML Data Form</li>
+					<li>Edit the _template page (Ctrl + E), select the entire page's content and copy.</li>
+					<li>Paste entire page source to the left textarea and click the &quot;&gt;&gt;&quot; button to convert</li>
+					<li>Check if there are any errors in the status box and copy the converted code and replace the existing content</li>
+					<li>Vola! Done!</li>
+				</ol>
+			</p>
 			<form method="post" class="grayshade">
 				<table style="width: 100%; padding: 10px;">
 					<tbody>
@@ -119,7 +142,6 @@
 						</td>
 				</tbody></table>
 			</form>
-			<hr />
 			<center>
 				<script type="text/javascript"><!--
 				google_ad_client = "ca-pub-2102065243904072";
