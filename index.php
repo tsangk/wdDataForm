@@ -55,11 +55,11 @@
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td style="width: 45%;">
 						<b>Input:</b> Paste the entire _template page below (copy from <i>view source</i> or <i>Edit</i> textarea)
 					</td>
-					<td></td>
-					<td>
+					<td style="width: 10%;"></td>
+					<td style="width: 45%;">
 						<b>Output:</b> Your new compliant _template code:
 					</td>
 				</tr>
