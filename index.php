@@ -9,14 +9,7 @@
 		<h1>Wikidot Data Form Converter</h1>
 		<p>This program converts existing forgiving YAML code into the current strict version.  Please note that this program is not perfect and may have bugs.  If you encounter any issues, please leave a comment <a href="http://jxeeno.tk/blog:wikidot:from-forgiving-to-strict">here</a> with the exact code that's causing the issue.</p>
 		<table style="width: 100%;">
-			<tbody><tr>
-				<td style="width: 50%;">
-					<b>Input:</b> Paste the entire _template page below (copy from <i>view source</i> or <i>Edit</i> textarea)
-				</td>
-				<td style="width: 50%;">
-					<b>Output:</b> Your new compliant _template code:
-				</td>
-				</tr>
+			<tbody>
 <?php
 	$textarea = "";
 	function checkStatus($array){
@@ -58,6 +51,14 @@
 			<tr>
 				<td colspan=2>
 					<div id="status"><?php echo $status; ?></div>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 50%;">
+					<b>Input:</b> Paste the entire _template page below (copy from <i>view source</i> or <i>Edit</i> textarea)
+				</td>
+				<td style="width: 50%;">
+					<b>Output:</b> Your new compliant _template code:
 				</td>
 			</tr>
 			<tr>
