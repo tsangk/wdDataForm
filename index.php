@@ -23,7 +23,7 @@
 			$dfarray = Spyc::YAMLLoad(trim($matches[1]));
 			$status = checkStatus($dfarray);
 			$textarea = preg_replace("/\[\[form\]\]([\s\S]+)\[\[\/form\]\]/","�DFREPLACE�",$_POST["yaml"]);
-			$textarea = str_replace("�DFREPLACE�",[[form]]\n".$dumper->dump($dfarray,999)."[[/form]]",$textarea)
+			$textarea = str_replace("�DFREPLACE�","[[form]]\n".$dumper->dump($dfarray,999)."[[/form]]",$textarea);
 		}else{
 			$status = "<b><span class=\"er-red\">ERROR! Please enter _template page with [[form]] blocks!</span></b>";
 			$textarea = "Enter your _template page with the non-complaint data form YAML and click the convert button!";
