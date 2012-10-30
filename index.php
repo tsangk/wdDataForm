@@ -48,7 +48,7 @@
 				font-size: 14px;
 			}
 			td{ vertical-align: top; font-size: 12px; }
-			#status{text-align: center;padding: 0 1em;margin: 0.5em 0;border: 1px solid #EAA;}
+			#status{text-align: center;padding: 0 1em;margin: 0.5em 0;border: 1px solid #EAA;background: white;}
 			#header{
 				background: #3b3b3b url(img/texture.png) repeat;
 				height: 30px;
@@ -77,14 +77,20 @@
 			#content{
 				margin-top: 50px;
 			}
+
+			/* Wrapping */
+			.grayshade{
+				background-color: #DDD;
+				border-radius: 10px;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="header"><span id="logo">Wikidot Data Form Converter</span></div>
 		<div id="content">
 			<p>This program converts existing forgiving YAML code into the current strict version.  Please note that this program is not perfect and may have bugs.  If you encounter any issues, please leave a comment <a href="http://jxeeno.tk/blog:wikidot:from-forgiving-to-strict">here</a> with the exact code that's causing the issue.</p>
-			<form method="post">
-				<table style="width: 100%;">
+			<form method="post" class="grayshade">
+				<table style="width: 100%; padding: 10px;">
 					<tbody>
 					<tr>
 						<td colspan=3>
@@ -111,7 +117,8 @@
 					</tr>
 					<tr>
 						<td colspan=3>
-							<span style="color: #333;">&copy; Kenneth Tsang 2012.  All rights reserved.  Powered by SPYC and syYaml.</span>
+							<span>&copy; Kenneth Tsang 2012.  All rights reserved.  Powered by SPYC and syYaml.</span><br />
+							<span><b>Disclaimer:</b> This tool does not guarantee accurate outputs.  Use at your own rish.</span>
 						</td>
 				</tbody></table>
 			</form>
