@@ -42,10 +42,10 @@
 			$status = checkStatus($dfarray);
 			$textarea = $dumper->dump($dfarray,10);*/
 			$status = "<b>ERROR! Please enter _template page with [[form]] blocks!</b>";
-			$textarea = "Enter your _template page with the non-complaint data form YAML and click \"Fix\"!";
+			$textarea = "Enter your _template page with the non-complaint data form YAML and click the convert button!";
 		}
 	}else{
-		$textarea = "Enter your _template page with the non-complaint data form YAML and click \"Fix\"!";
+		$textarea = "Enter your _template page with the non-complaint data form YAML and click the convert button!";
 		$status = "<b>Converter Ready!</b>";
 	}
 ?>
@@ -67,7 +67,7 @@
 					<td>
 							<textarea name="yaml" style="height: 300px; width: 100%;"><?php if(!empty($_POST["yaml"])){ echo htmlentities($_POST["yaml"]); } ?></textarea><br />
 					</td>
-					<td style="vertical-align:middle;"><input type="submit" value=">>" /></td>
+					<td style="vertical-align:middle;text-align:center;"><input type="submit" value=">>" /></td>
 					<td>
 						<textarea style="height: 300px; width: 100%;"><?php echo $textarea; ?></textarea>
 					</td>
