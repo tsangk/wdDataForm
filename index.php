@@ -5,7 +5,7 @@
 			if(count($array)!=1){
 				return "<b><span class=\"er-red\">Notice! There is more than one parent-level value. Usually, it is reserved for <i>fields:</i> only.</span></b><br />Please check indenting and copy the <b>entire</b> _template from the page editor.";
 			}else{
-				if(count($array["fields"])<1){
+				if(!is_array($array['fields'])){
 					return "<b><span class=\"er-red\">Notice! There are no fields defined.</span></b><br />Please check indenting and copy the <b>entire</b> _template from the page editor.";
 				}else{
 					return "<b>Your data form has been successfully converted!</b>";
