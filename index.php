@@ -108,8 +108,12 @@
 						<td>
 							<textarea style="height: 300px; width: 100%;"><?php echo $textarea; ?></textarea>
 						</td>
-					</tr></tbody>
-				</table>
+					</tr>
+					<tr>
+						<td colspan=3>
+							<span style="color: #333;">&copy; Kenneth Tsang 2012.  All rights reserved.  Powered by SPYC and syYaml.</span>
+						</td>
+				</tbody></table>
 			</form>
 			<hr />
 			<center>
@@ -125,8 +129,6 @@
 				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				</script>
 			</center>
-			<hr />
-			&copy; Kenneth Tsang 2012.  All rights reserved.  Powered by SPYC and syYaml.
 		</div>
 	</body>
 </html>
