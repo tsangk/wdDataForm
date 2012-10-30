@@ -85,7 +85,7 @@
 	<body>
 		<div id="header"><span id="logo">Wikidot Data Form Converter</span></div>
 		<div id="content">
-			<p>This program converts existing forgiving YAML code into the current strict version.  Please note that this program is not perfect and may have bugs.  If you encounter any issues, please leave a comment <a href="http://jxeeno.tk/blog:wikidot:from-forgiving-to-strict">here</a> with the exact code that's causing the issue.</p>
+			<p>This program converts existing forgiving YAML code into the current strict version.</p>
 			<form method="post" class="grayshade">
 				<table style="width: 100%; padding: 10px;">
 					<tbody>
@@ -115,7 +115,7 @@
 					<tr>
 						<td colspan=3>
 							<span>&copy; Kenneth Tsang 2012.  All rights reserved.  Powered by SPYC and syYaml.</span><br />
-							<span><b>Disclaimer:</b> This tool does not guarantee accurate output.  Use at your own risk.</span>
+							<span><b>Disclaimer:</b> This tool does not guarantee accurate output. Use at your own risk. If you encounter any issues, please leave a comment <a href="http://jxeeno.tk/blog:wikidot:from-forgiving-to-strict">here</a> with the exact code that's causing the issue.</span>
 						</td>
 				</tbody></table>
 			</form>
