@@ -3,16 +3,16 @@
 	function checkStatus($array){
 		if(isset($array["fields"])){
 			if(count($array)!=1){
-				return "<b>Notice! There is more than one parent-level value. Usually, it is reserved for <i>fields:</i> only.</b><br />Please check indenting and copy the <b>entire</b> _template from <i>view source</i> or the <i>Edit</i> textarea.";
+				return "<b><span class=\"er-red\">Notice! There is more than one parent-level value. Usually, it is reserved for <i>fields:</i> only.</span></b><br />Please check indenting and copy the <b>entire</b> _template from <i>view source</i> or the <i>Edit</i> textarea.";
 			}else{
 				if(count($array["fields"])<1){
-					return "<b>Notice! There are no fields defined.</b><br />Please check indenting and copy the <b>entire</b> _template from <i>view source</i> or the <i>Edit</i> textarea.";
+					return "<b><span class=\"er-red\">Notice! There are no fields defined.</span></b><br />Please check indenting and copy the <b>entire</b> _template from <i>view source</i> or the <i>Edit</i> textarea.";
 				}else{
 					return "<b>Your data form has been successfully converted!</b>";
 				}
 			}
 		}else{
-			return "<b>ERROR! Invalid Data Form input!  YAML must contain <i>fields:</i></b>";
+			return "<b><span class=\"er-red\">ERROR! Invalid Data Form input!  YAML must contain <i>fields:</i></span></b>";
 		}
 	}
 	if(!empty($_POST["yaml"])){
@@ -24,11 +24,7 @@
 			$status = checkStatus($dfarray);
 			$textarea = preg_replace("/\[\[form\]\]([\s\S]+)\[\[\/form\]\]/","[[form]]\n".$dumper->dump($dfarray,10)."[[/form]]",$_POST["yaml"]);
 		}else{
-			/*$dumper = new sfYamlDumper();
-			$dfarray = Spyc::YAMLLoad(trim($_POST["yaml"]));
-			$status = checkStatus($dfarray);
-			$textarea = $dumper->dump($dfarray,10);*/
-			$status = "<b>ERROR! Please enter _template page with [[form]] blocks!</b>";
+			$status = "<b><span class=\"er-red\">ERROR! Please enter _template page with [[form]] blocks!</span></b>";
 			$textarea = "Enter your _template page with the non-complaint data form YAML and click the convert button!";
 		}
 	}else{
@@ -83,6 +79,7 @@
 				background-color: #DDD;
 				border-radius: 10px;
 			}
+			.er-red{ color: red;}
 		</style>
 	</head>
 	<body>
