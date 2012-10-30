@@ -119,7 +119,7 @@
 					</tr>
 					<tr>
 						<td style="width: 45%;">
-							<b>Input:</b> Paste the entire _template page below (copy from <i>view source</i> or <i>Edit</i> textarea)
+							<b>Input:</b> Paste the entire page source from the _template page below (copy from the page editor)
 						</td>
 						<td style="width: 10%;"></td>
 						<td style="width: 45%;">
