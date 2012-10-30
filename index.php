@@ -115,7 +115,7 @@
 					<tr>
 						<td colspan=3>
 							<span>&copy; Kenneth Tsang 2012.  All rights reserved.  Powered by SPYC and syYaml.</span><br />
-							<span><b>Disclaimer:</b> This tool does not guarantee accurate outputs.  Use at your own rish.</span>
+							<span><b>Disclaimer:</b> This tool does not guarantee accurate output.  Use at your own risk.</span>
 						</td>
 				</tbody></table>
 			</form>
