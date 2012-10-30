@@ -8,8 +8,9 @@
 	<body>
 		<h1>Wikidot Data Form Converter</h1>
 		<p>This program converts existing forgiving YAML code into the current strict version.  Please note that this program is not perfect and may have bugs.  If you encounter any issues, please leave a comment <a href="http://jxeeno.tk/blog:wikidot:from-forgiving-to-strict">here</a> with the exact code that's causing the issue.</p>
-		<table style="width: 100%;">
-			<tbody>
+		<form method="post">
+			<table style="width: 100%;">
+				<tbody>
 <?php
 	$textarea = "";
 	function checkStatus($array){
@@ -48,32 +49,31 @@
 		$status = "<b>Converter Ready!</b>";
 	}
 ?>
-			<tr>
-				<td colspan=2>
-					<div id="status"><?php echo $status; ?></div>
-				</td>
-			</tr>
-			<tr>
-				<td style="width: 50%;">
-					<b>Input:</b> Paste the entire _template page below (copy from <i>view source</i> or <i>Edit</i> textarea)
-				</td>
-				<td style="width: 50%;">
-					<b>Output:</b> Your new compliant _template code:
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<form method="post">
-						<textarea name="yaml" style="height: 300px; width: 100%;"><?php if(!empty($_POST["yaml"])){ echo htmlentities($_POST["yaml"]); } ?></textarea><br />
-						<p style="text-align: right;"><input type="submit" value="fix!" /></p>
-					</form>
-				</td>
-				
-				<td>
-					<textarea style="height: 300px; width: 100%;"><?php echo $textarea; ?></textarea>
-				</td>
-			</tr></tbody>
-		</table>
+				<tr>
+					<td colspan=3>
+						<div id="status"><?php echo $status; ?></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<b>Input:</b> Paste the entire _template page below (copy from <i>view source</i> or <i>Edit</i> textarea)
+					</td>
+					<td></td>
+					<td>
+						<b>Output:</b> Your new compliant _template code:
+					</td>
+				</tr>
+				<tr>
+					<td>
+							<textarea name="yaml" style="height: 300px; width: 100%;"><?php if(!empty($_POST["yaml"])){ echo htmlentities($_POST["yaml"]); } ?></textarea><br />
+					</td>
+					<td style="vertical-align:middle;"><input type="submit" value=">>" /></td>
+					<td>
+						<textarea style="height: 300px; width: 100%;"><?php echo $textarea; ?></textarea>
+					</td>
+				</tr></tbody>
+			</table>
+		</form>
 		<hr />
 		<center>
 			<script type="text/javascript"><!--
