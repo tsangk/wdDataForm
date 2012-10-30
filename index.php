@@ -132,7 +132,7 @@
 						</td>
 						<td style="vertical-align:middle;text-align:center;"><input type="submit" value=">>" /></td>
 						<td>
-							<textarea style="height: 300px; width: 100%;"><?php echo $textarea; ?></textarea>
+							<textarea style="height: 300px; width: 100%;" disabled="disabled"><?php echo $textarea; ?></textarea>
 						</td>
 					</tr>
 					<tr>
