@@ -91,7 +91,7 @@
 				font-size: 120%;
 			}
 			#content{
-				margin-top: 50px;
+				margin-top: 40px;
 			}
 
 			/* Wrapping */
@@ -124,9 +124,7 @@
 				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				</script>
 			</center>
-			<p>This program converts existing forgiving YAML code into the current strict version.</p>
-			<p><b>How to use:</b></p>
-			<p>
+			<p><b>How to use:</b> This program converts existing forgiving YAML code into the current strict version.
 				<ol>
 					<li>Go to your _template page with an non-compliant YAML Data Form</li>
 					<li>Edit the _template page (Ctrl + E), select the entire page's content and copy.</li>
