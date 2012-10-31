@@ -23,7 +23,7 @@
 
 			// Bug fixes (reported by Ed Johnson)
 			// Colon in line
-			$matches[1] = preg_replace("/([\n\r] +)([^:]+):( .)([^'\n\r][^\n\r]+:[^\n\r]+[^'\n\r])($|\n|\r)/","$1$2:$3'$4'$5",$matches[1]);
+			$matches[1] = preg_replace("/([\n\r] +)([^:]+):( ?)([^'\n\r][^\n\r]+:[^\n\r]+[^'\n\r])($|\n|\r)/","$1$2:$3'$4'$5",$matches[1]);
 			$dfarray = Spyc::YAMLLoad(trim($matches[1]));
 			$status = checkStatus($dfarray);
 			$textarea = preg_replace("/\[\[form\]\]([\s\S]+)\[\[\/form\]\]/","�DFREPLACE�",$_POST["yaml"]);
