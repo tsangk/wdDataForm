@@ -82,6 +82,12 @@
 			}
 			.er-red{ color: red;}
 		</style>
+		<script type="text/javascript">
+			function selectAll(el){
+				el.focus();
+    			el.select();
+			}
+		</script>
 	</head>
 	<body>
 		<div id="header"><span id="logo">Wikidot Data Form Converter</span></div>
@@ -132,7 +138,7 @@
 						</td>
 						<td style="vertical-align:middle;text-align:center;"><input type="submit" value=">>" /></td>
 						<td>
-							<textarea style="height: 300px; width: 100%;"><?php echo $textarea; ?></textarea>
+							<textarea id="outputTA" onclick="selectAll(this);" style="height: 300px; width: 100%;"><?php echo $textarea; ?></textarea>
 						</td>
 					</tr>
 					<tr>
