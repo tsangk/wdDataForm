@@ -1,6 +1,7 @@
 <?php
 	$textarea = "";
 	function checkStatus($array){
+		$acceptedValues = array("label","type","values","default","category","join","before","after","width","height","match","match-error","hint","value","default-schema","required");
 		if(isset($array["fields"])){
 			if(count($array)!=1){
 				return "<b><span class=\"er-red\">Notice! There is more than one parent-level value. Usually, it is reserved for <i>fields:</i> only.</span></b><br />Please check indenting and copy the <b>entire</b> _template from the page editor.";
@@ -8,7 +9,21 @@
 				if(!is_array($array['fields'])){
 					return "<b><span class=\"er-red\">Notice! There are no fields defined.</span></b><br />Please check indenting and copy the <b>entire</b> _template from the page editor.";
 				}else{
-					return "<b>Your data form has been successfully converted!</b>";
+					$isokay = true;
+					$noticeString = "";
+					foreach($array["fields"] as $key=>$value){
+						foreach($value as $k => $v){
+							if(!in_array($k,$acceptedValues)){
+								$isokay = false;
+								$noticeString .= "<br />Please check property <i>$k</i> under field <i>$key</i>";
+							}
+						}
+					}
+					if(!$isokay){
+						return "<b><span class=\"er-red\">Notice! There are invalid data form properties defined.</span></b>$noticeString";
+					}else{
+						return "<b>Your data form has been successfully converted!</b>";
+					}
 				}
 			}
 		}else{
