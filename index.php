@@ -20,6 +20,10 @@
 		require_once('sfYamlDumper.php');
 		if(preg_match("/\[\[form\]\]([\s\S]+)\[\[\/form\]\]/",$_POST["yaml"],$matches)){
 			$dumper = new sfYamlDumper();
+
+			// Bug fixes (reported by Ed Johnson)
+			// Colon in line
+			$matches[1] = preg_replace("/(\n +)([^:]+): +([^'].+:.+[^'])($|\n)/","$1$2:'$3'$4",$matches[1]);
 			$dfarray = Spyc::YAMLLoad(trim($matches[1]));
 			$status = checkStatus($dfarray);
 			$textarea = preg_replace("/\[\[form\]\]([\s\S]+)\[\[\/form\]\]/","�DFREPLACE�",$_POST["yaml"]);
