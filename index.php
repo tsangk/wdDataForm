@@ -151,11 +151,11 @@
 					</tr>
 					<tr>
 						<td>
-								<textarea name="yaml" style="height: 300px; width: 100%;"><?php if(!empty($_POST["yaml"])){ echo $_POST["yaml"]; } ?></textarea><br />
+								<textarea name="yaml" style="height: 300px; width: 100%;"><?php if(!empty($_POST["yaml"])){ echo htmlentities($_POST["yaml"],ENT_COMPAT | ENT_HTML401,"UTF-8"); } ?></textarea><br />
 						</td>
 						<td style="vertical-align:middle;text-align:center;"><input type="submit" value=">>" /></td>
 						<td>
-							<textarea id="outputTA" onclick="selectAll(this);" style="height: 300px; width: 100%;"><?php echo $textarea; ?></textarea>
+							<textarea id="outputTA" onclick="selectAll(this);" style="height: 300px; width: 100%;"><?php echo htmlentities($textarea,ENT_COMPAT | ENT_HTML401,"UTF-8"); ?></textarea>
 						</td>
 					</tr>
 					<tr>
