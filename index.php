@@ -65,6 +65,15 @@
 				alert("Sorry, autocorrect is still under work.  Please check back later.")
 			}
 		</script>
+		<?php if(isset($_GET["iframe"])){ ?>
+		<script type="text/javascript" src="http://snippets.wdfiles.com/local--code/code:custom-html/1"></script>
+		<style>
+			#header{ display: none; }
+			#content{
+				margin-top: 5px;
+			}
+		</style>
+		<?php } ?>
 	</head>
 	<body>
 		<div id="header"><span id="logo">Wikidot Data Form Converter</span></div>
