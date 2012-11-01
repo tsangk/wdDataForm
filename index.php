@@ -41,7 +41,7 @@
 			$matches[1] = preg_replace("/([\n\r] +)([^:]+):( ?)([^\"'\n\r][^\n\r]+:[^\n\r]+[^\"'\n\r])($|\n|\r)/","$1$2:$3'$4'$5",$matches[1]);
 
 			// Bracket at end of line
-			$matches[1] = preg_replace("/([\n\r] +)([^:]+):( ?)(\[)($|\n|\r)/","$1$2:$3'$4'$5",$matches[1]);
+			$matches[1] = preg_replace("/([\n\r] +)([^:]+):( ?)(\[+)($|\n|\r)/","$1$2:$3'$4'$5",$matches[1]);
 			$dfarray = Spyc::YAMLLoad(trim($matches[1]));
 			$status = checkStatus($dfarray);
 			$textarea = preg_replace("/\[\[form\]\]([\s\S]+)\[\[\/form\]\]/","�DFREPLACE�",$_POST["yaml"]);
@@ -151,7 +151,7 @@
 					</tr>
 					<tr>
 						<td>
-								<textarea name="yaml" style="height: 300px; width: 100%;"><?php if(!empty($_POST["yaml"])){ echo htmlentities($_POST["yaml"]); } ?></textarea><br />
+								<textarea name="yaml" style="height: 300px; width: 100%;"><?php if(!empty($_POST["yaml"])){ echo htmlentities($_POST["yaml"],ENT_COMPAT | ENT_HTML401,"UTF-8"); } ?></textarea><br />
 						</td>
 						<td style="vertical-align:middle;text-align:center;"><input type="submit" value=">>" /></td>
 						<td>
