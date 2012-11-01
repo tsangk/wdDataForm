@@ -1,4 +1,6 @@
 <?php
+	$_POST["yaml"] = html_entity_decode($_POST["yaml"]);
+
 	$textarea = "";
 	function checkStatus($array){
 		$acceptedValues = array("label","type","values","default","category","join","before","after","width","height","match","match-error","hint","value","default-schema","required");
