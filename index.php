@@ -60,6 +60,10 @@
 					$("#spinner-wrap").fadeOut(function(){$("#button-wrap").fadeIn();});
 				},"json");
 			}
+			function autoCorrect(){
+
+				alert("Sorry, autocorrect is still under work.  Please check back later.")
+			}
 		</script>
 	</head>
 	<body>
@@ -107,7 +111,7 @@
 						<td>
 								<textarea id="inputTA" name="yaml" style="height: 300px; width: 100%;"></textarea><br />
 						</td>
-						<td style="vertical-align:middle;text-align:center;"><div id="button-wrap"><input type="submit" value=">>" /></div><div id="spinner-wrap"><img src="img/spin.gif" /></div></td>
+						<td style="vertical-align:middle;text-align:center;"><div id="button-wrap"><input type="submit" value=">>" /><br /><br />Autocorrect?<br /><span style="font-size:80%">(BETA)</span><br /><input type="checkbox" name="autocorrect" /></div><div id="spinner-wrap"><img src="img/spin.gif" /></div></td>
 						<td>
 							<textarea id="outputTA" onclick="selectAll(this);" style="height: 300px; width: 100%;"></textarea>
 						</td>
