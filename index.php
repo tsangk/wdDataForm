@@ -60,10 +60,6 @@
 					$("#spinner-wrap").fadeOut(function(){$("#button-wrap").fadeIn();});
 				},"json");
 			}
-			function autoCorrect(){
-
-				alert("Sorry, autocorrect is still under work.  Please check back later.")
-			}
 		</script>
 		<?php if(isset($_GET["iframe"])){ ?>
 		<script type="text/javascript" src="http://snippets.wdfiles.com/local--code/code:custom-html/1"></script>
