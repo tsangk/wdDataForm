@@ -4,6 +4,9 @@ This is the source code for Wikidot Data Form Converter, a program that automati
 
 You can view a live version of this code here: http://wikidot.herokuapp.com/
 
+Licensing
+==========
+
 Copyright (c) Kenneth Tsang 2012
 
 This program is free software: you can redistribute it and/or modify
